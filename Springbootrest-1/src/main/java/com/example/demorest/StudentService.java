@@ -46,4 +46,8 @@ public class StudentService {
 		}
 	}
 
+	public void removeStudent(int id) {
+		students.removeIf(s -> s.getId() == id);
+	}
+
 }
