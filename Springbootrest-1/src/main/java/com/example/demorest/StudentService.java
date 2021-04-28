@@ -31,4 +31,9 @@ public class StudentService {
 		return student;
 	}
 
+	public void addStudent(Student student) {
+		System.out.println("controllers add student");
+		students.add(student);
+	}
+
 }
