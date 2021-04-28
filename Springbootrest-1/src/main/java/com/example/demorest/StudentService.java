@@ -2,6 +2,7 @@ package com.example.demorest;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -23,6 +24,11 @@ public class StudentService {
 	public List<Student> getStudents(){
 		createStudents();
 		return students;
+	}
+	
+	public Student getStudent(int id) {
+		Student student=  students.stream().filter(s -> s.getId() == id ).findFirst().get();
+		return student;
 	}
 
 }
